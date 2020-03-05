@@ -19,11 +19,11 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Text", name: "text", widget: "string"}
-   - name: "credits"
-     label: "Credits"
-     folder: "_posts/credits"
-     create: true
-     fields:
-        - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-        - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-        - {label: "Text", name: "text", widget: "string"}
+  - name: "credits"
+    label: "Credits"
+    folder: "_posts/credits"
+    create: true
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Text", name: "text", widget: "string"}
