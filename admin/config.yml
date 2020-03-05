@@ -11,19 +11,13 @@ collections: # A list of collections the CMS should be able to edit
     sort: "date:desc" # Default is title:asc
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-  - name: "shows"
-    label: "Shows"
-    folder: "_posts/shows"
-    create: true
-    fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Text", name: "text", widget: "string"}
-  - name: "credits"
-    label: "Credits"
+  - label: "Credits"
+    name: "credits"
     folder: "_posts/credits"
     create: true
+    identifier_field: name
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Text", name: "text", widget: "string"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
