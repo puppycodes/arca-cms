@@ -1,0 +1,4 @@
+{%- for post in site.posts -%}
+function() { return '{{ post.title | escape }}'; },
+{%- endfor -%}
+function() { return ''; }

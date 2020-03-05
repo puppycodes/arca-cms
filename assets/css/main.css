@@ -1,0 +1,707 @@
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  background-color: #000;
+}
+
+
+body {
+  overflow-x: hidden;
+  color: white;
+  font-family: Acumin Pro !important;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `c    background-color: #1a1f23c7;
+    color: white;
+    font-size: 9px;
+    padding: 5px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    border-top: 1px solid black;learfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: none;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+
+/* Styles */
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.logo {
+  position: relative;
+  padding-top: 100px;
+  min-width: 300px;
+  max-width: 500px;
+  left: 0;
+  right: 0;
+  width: 70%;
+  margin: auto;
+}
+
+.logo img {
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+
+
+/* menu */
+
+#menuToggle
+{
+  display: block;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 50px;
+  color: black;
+
+  z-index: 3;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+      width: 55px;
+      height: 55px;
+      position: absolute;
+      top: 0;
+      left: 0px;
+      cursor: pointer;
+      opacity: 0;
+      z-index: 2;
+
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+
+  width: 30px;
+  margin-bottom: 5px;
+  position: relative;
+  background: transparent;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span::before
+{
+  content: 'menu';
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(0px, 0px);
+}
+
+#menuToggle input:checked ~ span::before
+{
+  content: 'close';
+  color: white;
+}
+
+
+
+
+
+
+#menu
+{
+  position: fixed;
+  width: 100%;
+  right: 0;
+  height: 100vh;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 50px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+
+
+/*
+ * And let's fade it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: scale(1.0, 1.0);
+  opacity: 1;
+}
+
+.menu-links {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.menu-links li a {
+  display: block;
+  font-size: 40px;
+}
+
+.menu-links-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  color: white;
+}
+
+.spacer {
+  height: 100px;
+  display: block;
+}
+
+.credit {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.vimeo-wrapper {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   pointer-events: none;
+   overflow: hidden;
+}
+.vimeo-wrapper iframe {
+   width: 100vw;
+   height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+   min-height: 100vh;
+   min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.vimeo-wrapper-menu {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   pointer-events: none;
+   overflow: hidden;
+   opacity: 0.8;
+}
+.vimeo-wrapper-menu iframe {
+   width: 100vw;
+   height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+   min-height: 100vh;
+   min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.iti {
+  width: 100%;
+}
+
+.top {
+  width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+}
+
+.form-wrap {
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: 100px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+form {
+  position: relative;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+
+
+
+.consent {
+  background-color: #000000c7;
+  color: white;
+  font-size: 9px;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  font-family: helvetica;
+
+}
+
+.consent-text {
+  padding: 15px;
+}
+
+button {
+    display: inline-block;
+    border: none;
+    padding: 0.6rem;
+    margin: 0;
+    height: 50px;
+    width: 50%;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: transparent;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out,
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-color: #1a1f23c7;
+    font-family: Acumin Pro;
+
+
+
+}
+
+button:hover, button:focus {
+
+}
+
+
+.iti--allow-dropdown input, .iti--allow-dropdown input[type="tel"] {
+  width: 100%;
+  border-radius: 0px;
+  font-family: Acumin Pro;
+  height: 50px;
+
+}
+
+:focus { outline: none;}
+
+button:active {
+    transform: scale(0.99);
+}
+
+.iti input {
+  display: inline-block;
+    border: none;
+    padding: 0.6rem;
+    margin: 0;
+    text-decoration: none;
+    background: #000000c7;
+    color: #ffffff;
+}
+
+
+.iti-mobile .iti__country-list {
+    max-height: 100%;
+    width: 250px;
+}
+
+button:focus {
+    outline: 0px solid #fff;
+    outline-offset: 0;
+}
+
+#marquee {
+       position: fixed;
+       overflow: hidden;
+       margin: 0;
+       padding: 7px 0;
+       font-size: 30px;
+       bottom: 80px;
+       left: 0;
+       right: 0;
+       background-color: transparent;
+       color: #ffffff;
+     }
+
+
+     #marquee2 {
+       position: fixed;
+       overflow: hidden;
+       margin: 0;
+       padding-bottom: 433px;
+       padding: 0px 0;
+       font-size: 30px;
+       bottom: 102px;
+       left: 0;
+       padding-top: 7px;
+       height: 80px;
+       right: 0;
+       background-color: #000000a1;
+       color: #ffffff;
+          }
+
+          .credits {
+            color: white;
+          }
+
+      .credits a {
+        text-decoration: underline;
+      }
+
+      .dates {
+        color: white;
+      }
+
+      .dates a {
+        text-decoration: underline;
+      }
+
+     .iti--separate-dial-code .iti__selected-dial-code {
+         margin-left: 6px;
+         color: white;
+     }
+
+     .iti__flag {
+       display: none;
+     }
+
+     .iti__country-list {
+         position: absolute !important;
+         z-index: 2 !important;
+         list-style: none !important;
+         text-align: left !important;
+         padding: 0 !important;
+         margin: 0 0 0 -1px !important;
+         box-shadow: 1px 1px 4px rgba(0,0,0,.2) !important;
+         background-color: #1a1f23c7 !important;
+         border: 1px solid #ccc !important;
+         white-space: nowrap !important;
+         max-height: 200px !important;
+         overflow-y: scroll !important;
+         -webkit-overflow-scrolling: touch !important;
+         color: white !important;
+         width: 250px !important;
+     }
+
+    .hide {
+      display: none;
+    }
+
+    #error-msg {
+      position: absolute;
+      transform: rotate(0deg) translate(0px, 0px);
+      z-index: 1;
+      background: #ff000082;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 0;
+      top: -20px;
+      width: 100%;
+      text-transform: uppercase;
+    }
+
+    #valid-msg {
+      display: none;
+    }
