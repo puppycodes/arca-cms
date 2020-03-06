@@ -5,25 +5,23 @@ backend:
 media_folder: "img/uploads" # Folder where user uploaded files should go
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
+  - label: "Credits" # Used in the UI, ie.: "New Post"
+    name: "credits" # Used in routes, ie.: /admin/collections/:slug/edit
+    identifier_field: credit
     folder: "_posts" # The path to the folder where the documents are stored
+    filter: {field: "Credit", name: "credit", widget: "string"}
     sort: "date:desc" # Default is title:asc
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-  - name: "shows"
-    label: "Shows"
-    folder: "_posts/shows"
-    create: true
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Text", name: "text", widget: "string"}
-  - name: "credits"
-    label: "Credits"
-    folder: "_posts/credits"
+      - {label: "Credit", name: "credit", widget: "string"}
+  - label: "Shows"
+    name: "shows"
+    identifier_field: show
+    folder: "_posts"
+    filter: {field: "Show", name: "show", widget: "string"}
+    sort: "date:desc"
     create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Text", name: "text", widget: "string"}
+      - {label: "Show", name: "show", widget: "string"}
