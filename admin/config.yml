@@ -19,7 +19,6 @@ collections: # A list of collections the CMS should be able to edit
     name: "shows"
     folder: "_posts/shows"
     identifier_field: show
-    folder: "_posts"
     filter: {field: "Show", name: "show", widget: "string"}
     sort: "date:desc"
     create: true
