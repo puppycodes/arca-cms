@@ -1,4 +1,4 @@
 {%- for post in site.posts -%}
-function() { return '{{ post.title | escape }}'; },
+function() { return '{{ post.show | escape }}'; },
 {%- endfor -%}
 function() { return ''; }

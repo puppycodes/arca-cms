@@ -124,7 +124,7 @@
         var $marquee = document.getElementById('marquee');
         var marquee = window.m = new dynamicMarquee.Marquee($marquee, { rate: -100 });
         window.l = dynamicMarquee.loop(marquee, [
-          {% include events.html %}
+          {% include credit.html %}
         ], function() {
           var $separator = document.createElement('div');
           $separator.innerHTML = '&nbsp&nbsp&nbsp&nbsp';
@@ -137,17 +137,7 @@
             let marquee2 = window.m = new dynamicMarquee.Marquee($marquee2, { rate: -170 });
 
             window.l = dynamicMarquee.loop(marquee2, [
-              function() { return 'Sat-Apr-25-20 : New York, NY : Brooklyn Steel' },
-              function() { return 'Mon-Apr-27-20 : Washington, DC : 9:30 Club'; },
-              function() { return 'Tue-Apr-28-20 : Boston, MA : Royale';},
-              function() { return 'Fri-May-01-20 : Toronto, ON, CAN : The Phoenix Concert Theatre'; },
-              function() { return 'Sat-May-02-20 : Philadelphia, PA: The Ave'; },
-              function() { return 'Thu-May-07-20 : Minneapolis, MN: First Avenue'; },
-              function() { return 'Fri-May-08-20 : Chicago, IL: Metro'; },
-              function() { return 'Sun-May-10-20 : Vancouver, BC, CAN: Vogue Theatre'},
-              function() { return 'Tue-May-12-20 : Seattle, WA: The Neptune Theatre'},
-              function() { return 'Thu-May-14-20 : San Francisco, CA: The Regency Ballroom'; },
-              function() { return 'Fri-May-15-20 : Los Angeles, CA: The Belasco' }
+              {% include show.html %}
 
             ], function() {
               var $separator = document.createElement('div');
