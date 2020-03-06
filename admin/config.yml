@@ -25,3 +25,13 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Show", name: "show", widget: "string"}
+  - label: "Main Video"
+    name: "mainVideo"
+    folder: "_posts/mainVideo"
+    identifier_field: mainVideo
+    filter: {field: "Main Video", name: "mainVideo", widget: "string"}
+    sort: "date:desc"
+    create: false
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Main Video", name: "mainVideo", widget: "string"}
