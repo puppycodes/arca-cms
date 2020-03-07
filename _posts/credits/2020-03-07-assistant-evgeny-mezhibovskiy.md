@@ -1,3 +1,3 @@
 ---
-credit: 'Assistant: Evgeny Mezhibovskiy'
+credit: 'Assistant: Evgeny Mezhibovskiy '
 ---
