@@ -12,7 +12,7 @@ collections: # A list of collections the CMS should be able to edit
     filter: {field: "Credit", name: "credit", widget: "string"}
     sort: "date:desc" # Default is title:asc
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
       - {label: "Credit", name: "credit", widget: "string"}
   - label: "Shows"
@@ -22,7 +22,7 @@ collections: # A list of collections the CMS should be able to edit
     filter: {field: "Show", name: "show", widget: "string"}
     sort: "date:desc"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
       - {label: "Show", name: "show", widget: "string"}
   - label: "Main Video"
@@ -32,6 +32,6 @@ collections: # A list of collections the CMS should be able to edit
     filter: {field: "Main Video", name: "mainVideo", widget: "string"}
     sort: "date:desc"
     create: false
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
-      - {label: "Main Video", name: "mainVideo", widget: "string"}
+      - {label: "Vimeo Video ID", name: "mainVideo", widget: "string"}
