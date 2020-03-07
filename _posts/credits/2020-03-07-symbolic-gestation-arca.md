@@ -1,3 +1,0 @@
----
-credit: 'Symbolic gestation : Arca'
----
