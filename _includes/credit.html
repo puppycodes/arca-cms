@@ -1,4 +1,4 @@
-{%- for post in site.posts -%}
+{%- for post in site.posts | reverse -%}
 function() { return '{{ post.credit | escape }}'; },
 {%- endfor -%}
 function() { return ''; }

@@ -11,10 +11,9 @@ collections: # A list of collections the CMS should be able to edit
     identifier_field: credit
     filter: {field: "Credit", name: "credit", widget: "string"}
     sort: "date:asc" # Default is title:asc
-    create: true # Allow users to create new documents in this collection
+    create: false # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
-      - { label: 'Publish Date', name: 'date', dateFormat: "X", widget: 'datetime' }
       - { label: "Credit", name: "credit", widget: "string" }
   - label: "Shows"
     name: "shows"
@@ -22,10 +21,9 @@ collections: # A list of collections the CMS should be able to edit
     identifier_field: show
     filter: {field: "Show", name: "show", widget: "string"}
     sort: "date:asc"
-    create: true
+    create: false
     slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
-      - { label: 'Publish Date', name: 'date', dateFormat: "X", widget: 'datetime' }
       - { label: "Show", name: "show", widget: "string" }
   - label: "Main Video"
     name: "mainVideo"
