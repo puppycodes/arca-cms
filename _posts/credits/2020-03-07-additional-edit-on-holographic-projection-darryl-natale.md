@@ -1,3 +1,3 @@
 ---
-credit: 'Additional Edit on Holographic projection: Darryl Natale'
+credit: 'Additional Edit on Holographic projection: Darryl Natale '
 ---
