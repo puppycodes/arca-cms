@@ -1,3 +1,3 @@
 ---
-credit: 'Concept and Scenario : Frederik Heyman and Arca'
+credit: 'Concept and Scenario : Frederik Heyman and Arca '
 ---
