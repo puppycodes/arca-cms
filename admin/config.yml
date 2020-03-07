@@ -14,7 +14,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Publish Date', name: 'date', dateFormat: "X", widget: 'datetime' }
       - { label: "Credit", name: "credit", widget: "string" }
   - label: "Shows"
     name: "shows"
@@ -25,7 +25,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Publish Date', name: 'date', dateFormat: "X", widget: 'datetime' }
       - { label: "Show", name: "show", widget: "string" }
   - label: "Main Video"
     name: "mainVideo"
@@ -36,5 +36,4 @@ collections: # A list of collections the CMS should be able to edit
     create: false
     slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: "Vimeo Video ID", name: "mainVideo", widget: "string" }
