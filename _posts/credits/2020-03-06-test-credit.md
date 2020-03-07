@@ -1,3 +1,3 @@
 ---
-credit: test credit
+credit: Directed by Frederik Heyman
 ---
