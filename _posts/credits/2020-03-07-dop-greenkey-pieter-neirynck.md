@@ -1,3 +1,3 @@
 ---
-credit: 'DOP Greenkey: Pieter Neirynck'
+credit: 'DOP Greenkey: Pieter Neirynck '
 ---
