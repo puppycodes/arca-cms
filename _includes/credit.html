@@ -1,4 +1,1 @@
-{%- for post in site.posts | reverse -%}
-function() { return '{{ post.credit | escape }}'; },
-{%- endfor -%}
-function() { return ''; }
+{%- for post in site.posts -%}{{ post.credit | escape }}{%- endfor -%}

@@ -12,7 +12,7 @@
 
     <div class="vimeo-wrapper">
       <iframe
-      src="https://player.vimeo.com/video/392273747?background=1&autoplay=1&loop=1&byline=0&title=0"
+      src="https://player.vimeo.com/video/{% include mainVideo.html %}?background=1&autoplay=1&loop=1&byline=0&title=0"
       frameborder="0"
       webkitallowfullscreen
       mozallowfullscreen
@@ -124,10 +124,10 @@
         var $marquee = document.getElementById('marquee');
         var marquee = window.m = new dynamicMarquee.Marquee($marquee, { rate: -100 });
         window.l = dynamicMarquee.loop(marquee, [
-          {% include credit.html %}
+          function() { return '{% include credit.html %}'; }
         ], function() {
           var $separator = document.createElement('div');
-          $separator.innerHTML = '&nbsp&nbsp&nbsp&nbsp';
+          $separator.innerHTML = '';
           return $separator;
         });
       </script>
@@ -137,11 +137,10 @@
             let marquee2 = window.m = new dynamicMarquee.Marquee($marquee2, { rate: -170 });
 
             window.l = dynamicMarquee.loop(marquee2, [
-              {% include show.html %}
-
+              function() { return '{% include show.html %}'; }
             ], function() {
               var $separator = document.createElement('div');
-              $separator.innerHTML = '&nbsp&nbsp&nbsp&nbsp';
+              $separator.innerHTML = '';
               return $separator;
             });
       </script>

@@ -1,4 +1,1 @@
-{%- for post in site.posts -%}
-function() { return '{{ post.show | escape }}'; },
-{%- endfor -%}
-function() { return ''; }
+{%- for post in site.posts -%}{{ post.show | escape }}{%- endfor -%}
