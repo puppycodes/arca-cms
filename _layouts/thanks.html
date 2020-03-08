@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include header.html %}
+
+    <div class="thanks">
+      thanks!
+    </div>
+
+    <div class="vimeo-wrapper">
+      <iframe
+      src="https://player.vimeo.com/video/{% include mainVideo.html %}?background=1&autoplay=1&loop=1&byline=0&title=0"
+      frameborder="0"
+      webkitallowfullscreen
+      mozallowfullscreen
+      allowfullscreen>
+    </iframe>
+   </div>
+
+   <div class="logo">
+     <img src="{{ 'assets/img/logo-cropped.svg' | relative_url }}">
+     <img src="{{ 'assets/img/repeating-paint.svg' | relative_url }}">
+     <a href="https://www.facebook.com/arca1000000/app/123966167614127/">
+       <img src="{{ 'assets/img/poster_op.jpg' | relative_url }}"></a>
+     <img src="{{ 'assets/img/repeating-paint.svg' | relative_url }}">
+   </div>
+
+  <div class="form-wrap">
+         <form
+           action="https://formkeep.com/f/e55339c33966"
+           accept-charset="UTF-8"
+           enctype="multipart/form-data"
+           method="POST"
+         >
+           <div class="top">
+             <input id="phone" name="phone" type="tel">
+             <span id="valid-msg" class="hide">✓ Valid</span>
+             <span id="error-msg" class="hide"></span>
+
+              <button disabled id="submit" type="submit">submit</button>
+           </div>
+           <div class="consent">
+             <div class="consent-text">
+               By submitting this form I authorize and expressly consent to receiving calls and/or SMS/text and voice messages delivered to my phone number
+             </div>
+           </div>
+         </form>
+  </div>
+
+  <script type="text/javascript">
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+      // allowDropdown: false,
+      // autoHideDialCode: false,
+      // autoPlaceholder: "off",
+      // dropdownContainer: document.body,
+      // excludeCountries: ["us"],
+      formatOnDisplay: true,
+      // geoIpLookup: function(callback) {
+      //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+      //     var countryCode = (resp && resp.country) ? resp.country : "";
+      //     callback(countryCode);
+      //   });
+      // },
+      hiddenInput: "full_number",
+      initialCountry: "US",
+      // localizedCountries: { 'de': 'Deutschland' },
+      // nationalMode: false,
+      // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+      // placeholderNumberType: "MOBILE",
+      // preferredCountries: ['cn', 'jp'],
+    separateDialCode: true,
+    utilsScript: '{{ "/assets/js/utils.js" | relative_url }}',
+  });
+
+  console.log("test");
+  </script>
+
+  <script type="text/javascript">
+    errorMsg = document.querySelector("#error-msg"),
+    validMsg = document.querySelector("#valid-msg");
+    submitButton = document.querySelector("#submit");
+
+  // here, the index maps to the error code returned from getValidationError - see readme
+  var errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
+
+  // initialise plugin
+  var iti = window.intlTelInput(input, {
+    utilsScript: '{{ "/assets/js/utils.js" | relative_url }}'
+  });
+
+  var reset = function() {
+    input.classList.remove("error");
+    errorMsg.innerHTML = "";
+    errorMsg.classList.add("hide");
+    validMsg.classList.add("hide");
+  };
+
+  input.addEventListener('blur', function() {
+    reset();
+    if (input.value.trim()) {
+      if (iti.isValidNumber()) {
+        validMsg.classList.remove("hide");
+          submitButton.disabled = false;
+      } else {
+        input.classList.add("error");
+        var errorCode = iti.getValidationError();
+        errorMsg.innerHTML = errorMap[errorCode];
+        errorMsg.classList.remove("hide");
+          submitButton.disabled = true;
+      }
+    };
+  });
+
+  // on keyup / change flag: reset
+  input.addEventListener('change', reset);
+  input.addEventListener('keyup', reset);
+  </script>
+
+    <script type="text/javascript">
+        var $marquee = document.getElementById('marquee');
+        var marquee = window.m = new dynamicMarquee.Marquee($marquee, { rate: -100 });
+        window.l = dynamicMarquee.loop(marquee, [
+          function() { return '{% include credit.html %}'; }
+        ], function() {
+          var $separator = document.createElement('div');
+          $separator.innerHTML = '';
+          return $separator;
+        });
+      </script>
+
+      <script type="text/javascript">
+            let $marquee2 = document.getElementById('marquee2');
+            let marquee2 = window.m = new dynamicMarquee.Marquee($marquee2, { rate: -170 });
+
+            window.l = dynamicMarquee.loop(marquee2, [
+              function() { return '{% include show.html %}'; }
+            ], function() {
+              var $separator = document.createElement('div');
+              $separator.innerHTML = '';
+              return $separator;
+            });
+      </script>
+
+
+    {% include footer.html %}
+
+
+  </body>
+</html>
