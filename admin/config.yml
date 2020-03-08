@@ -34,3 +34,12 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
       - { label: "Vimeo Video ID", name: "mainVideo", widget: "string" }
+  - label: "Menu Video"
+    name: "menuVideo"
+    folder: "_posts/menuVideo"
+    identifier_field: menuVideo
+    filter: { field: "Menu Video", name: "menuVideo", widget: "string" }
+    create: false
+    slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
+    fields:
+      - { label: "Vimeo Video ID", name: "menuVideo", widget: "string" }
