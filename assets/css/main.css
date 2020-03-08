@@ -705,3 +705,16 @@ button:focus {
     #valid-msg {
       display: none;
     }
+
+.thanks-container {
+  z-index: 0;
+    position: relative;
+    width: 100%;
+}
+
+.thanks {
+  font-size: 30px;
+      background-color: #000000c7;
+      text-align: center;
+      padding: 20px;
+}
