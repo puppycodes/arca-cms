@@ -8,24 +8,8 @@
   <body>
     {% include header.html %}
 
-
-
-    <div class="vimeo-wrapper">
-      <iframe
-      src="https://player.vimeo.com/video/{% include mainVideo.html %}?background=1&autoplay=1&loop=1&byline=0&title=0"
-      frameborder="0"
-      webkitallowfullscreen
-      mozallowfullscreen
-      allowfullscreen>
-    </iframe>
-   </div>
-
    <div class="logo">
      <img src="{{ 'assets/img/logo-cropped.svg' | relative_url }}">
-     <img src="{{ 'assets/img/repeating-paint.svg' | relative_url }}">
-     <a href="https://www.facebook.com/arca1000000/app/123966167614127/">
-       <img src="{{ 'assets/img/poster_op.jpg' | relative_url }}"></a>
-     <img src="{{ 'assets/img/repeating-paint.svg' | relative_url }}">
    </div>
 
   <div class="form-wrap">
@@ -120,30 +104,7 @@
   input.addEventListener('keyup', reset);
   </script>
 
-    <script type="text/javascript">
-        var $marquee = document.getElementById('marquee');
-        var marquee = window.m = new dynamicMarquee.Marquee($marquee, { rate: -100 });
-        window.l = dynamicMarquee.loop(marquee, [
-          function() { return '{% include credit.html %}'; }
-        ], function() {
-          var $separator = document.createElement('div');
-          $separator.innerHTML = '';
-          return $separator;
-        });
-      </script>
 
-      <script type="text/javascript">
-            let $marquee2 = document.getElementById('marquee2');
-            let marquee2 = window.m = new dynamicMarquee.Marquee($marquee2, { rate: -170 });
-
-            window.l = dynamicMarquee.loop(marquee2, [
-              function() { return '{% include show.html %}'; }
-            ], function() {
-              var $separator = document.createElement('div');
-              $separator.innerHTML = '';
-              return $separator;
-            });
-      </script>
 
 
     {% include footer.html %}
