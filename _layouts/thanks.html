@@ -17,7 +17,10 @@
   <div class="form-wrap">
     <div class="thanks-container">
         <div class="thanks">
-      <div class="message">:)</div>
+      <div class="message">
+        <div>gracias a ustedes <3 </div>
+          <br>
+            ɐ</div>
     </div>
     </div>
          <form
@@ -88,10 +91,6 @@
     errorMsg.innerHTML = "";
     errorMsg.classList.add("hide");
     validMsg.classList.add("hide");
-  };
-
-  input.addEventListener('blur', function() {
-    reset();
     if (input.value.trim()) {
       if (iti.isValidNumber()) {
         validMsg.classList.remove("hide");
@@ -104,6 +103,10 @@
           submitButton.disabled = true;
       }
     };
+  };
+
+  input.addEventListener('blur', function() {
+    reset();
   });
 
   // on keyup / change flag: reset
