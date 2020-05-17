@@ -25,8 +25,12 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
-      - { label: "Link Title", name: "linkTitle", widget: "string" }
-      - { label: "Link Url", name: "linkUrl", widget: "string" }
+      - label: Links List
+      name: linksList
+      widget: object
+      fields:
+        - { label: "Link Title", name: "linkTitle", widget: "string" }
+        - { label: "Link Url", name: "linkUrl", widget: "string" }
   - label: "Main Image"
     name: "mainImage"
     folder: "_posts/mainImage"
