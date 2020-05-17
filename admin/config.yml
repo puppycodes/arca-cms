@@ -33,15 +33,17 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
       - { label: "Vimeo Video ID", name: "menuVideo", widget: "string" }
-  files:
-    - label: "Links"
-      name: "links"
-      file: "_data/links.yml"
-      fields:
-        - label: "Links List"
-          label_singular: "Link"
-          name: linksList
-          widget: list
+  - label: "Links"
+    name: "links"
+      files:
+        - label: "Menu Links"
+          name: "menuLinks"
+          file: "_data/links.yml"
           fields:
-            - { label: "Link Title", name: "linkTitle", widget: "string" }
-            - { label: "Link Url", name: "linkUrl", widget: "string" }
+            - label: "Links List"
+              label_singular: "Link"
+              name: linksList
+              widget: list
+              fields:
+                - { label: "Link Title", name: "linkTitle", widget: "string" }
+                - { label: "Link Url", name: "linkUrl", widget: "string" }
