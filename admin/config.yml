@@ -19,13 +19,13 @@ collections: # A list of collections the CMS should be able to edit
     name: "links"
     folder: "_posts/links"
     identifier_field: links
-    filter: {field: "Title", name: "title", widget: "string"}
+    filter: {field: "Link Title", name: "linkTitle", widget: "string"}
     sort: "date:asc"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Url", name: "url", widget: "string" }
+      - { label: "Link Title", name: "linkTitle", widget: "string" }
+      - { label: "Link Url", name: "linkUrl", widget: "string" }
   - label: "Main Image"
     name: "mainImage"
     folder: "_posts/mainImage"
