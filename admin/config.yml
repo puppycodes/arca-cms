@@ -18,7 +18,7 @@ collections: # A list of collections the CMS should be able to edit
   - label: "Links"
     name: "links"
     folder: "_posts/links"
-    identifier_field: links
+    identifier_field: linkTitle
     filter: {field: "Link Title", name: "linkTitle", widget: "string"}
     sort: "date:asc"
     create: true
