@@ -21,7 +21,7 @@ collections: # A list of collections the CMS should be able to edit
     identifier_field: links
     filter: {field: "Title", name: "title", widget: "string"}
     sort: "date:asc"
-    create: false
+    create: true
     slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
