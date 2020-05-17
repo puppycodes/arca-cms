@@ -1,3 +1,3 @@
 ---
-mainImage: /img/uploads/beware.jpg
+mainImage: /img/uploads/nb_op_tall.jpg
 ---
