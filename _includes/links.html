@@ -1,3 +1,3 @@
-{%- for post in site.posts -%}
-<li><a href="{{ post.linkUrl | escape }}">{{ post.linkTitle | escape }}</a></li>
+{% for item in site.data.links.linksList %}
+<li><a href="{{ item.linkUrl }}">{{ item.linkTitle }}</a></li>
 {%- endfor -%}
