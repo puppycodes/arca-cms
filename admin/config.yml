@@ -27,7 +27,9 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - label: Links List
         name: linksList
+        identifier_field: linkTitle
         widget: object
+        allow_add: true
         fields:
           - { label: "Link Title", name: "linkTitle", widget: "string" }
           - { label: "Link Url", name: "linkUrl", widget: "string" }
