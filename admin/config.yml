@@ -25,15 +25,15 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
       - { label: "Show", name: "show", widget: "text" }
-  - label: "Main Video"
-    name: "mainVideo"
-    folder: "_posts/mainVideo"
-    identifier_field: mainVideo
-    filter: { field: "Main Video", name: "mainVideo", widget: "string" }
+  - label: "Main Image"
+    name: "mainImage"
+    folder: "_posts/mainImage"
+    identifier_field: mainImage
+    filter: { field: "Main Image", name: "mainImage", widget: "image" }
     create: false
     slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
-      - { label: "Vimeo Video ID", name: "mainVideo", widget: "string" }
+      - { label: "Main Image", name: "mainImage", widget: "image" }
   - label: "Menu Video"
     name: "menuVideo"
     folder: "_posts/menuVideo"
