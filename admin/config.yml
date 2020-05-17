@@ -15,21 +15,6 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
       - { label: "Credit", name: "credit", widget: "text" }
-  - label: "Links"
-    name: "links"
-    widget: "list"
-    summary: '{{fields.linkTitle}}'
-    folder: "_posts/links"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
-    fields:
-      - label: Links List
-        name: linksList
-        widget: object
-        allow_add: true
-        fields:
-          - { label: "Link Title", name: "linkTitle", widget: "string" }
-          - { label: "Link Url", name: "linkUrl", widget: "string" }
   - label: "Main Image"
     name: "mainImage"
     folder: "_posts/mainImage"
@@ -48,3 +33,15 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
       - { label: "Vimeo Video ID", name: "menuVideo", widget: "string" }
+  files:
+    - label: "Links"
+      name: "links"
+      file: "_data/links.yml"
+      fields:
+        - label: "Links List"
+          label_singular: "Link"
+          name: linksList
+          widget: list
+          fields:
+            - { label: "Link Title", name: "linkTitle", widget: "string" }
+            - { label: "Link Url", name: "linkUrl", widget: "string" }
