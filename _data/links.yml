@@ -1,5 +1,19 @@
 linksList:
-  - linkTitle: 'Test Link'
-    linkUrl: 'https://google.com'
-  - linkTitle: 'Test Link'
-    linkUrl: 'https://google.com'
+  - linkTitle: NONBINARY
+    linkUrl: https://vimeo.com/413129584
+  - linkTitle: LISTEN / WATCH
+    linkUrl: https://arca.ffm.to/nonbinary
+  - linkUrl: https://merch.streamelements.com/arca1000000
+    linkTitle: MERCH
+  - linkUrl: https://twitch.tv/arca1000000
+    linkTitle: TWITCH
+  - linkUrl: https://www.patreon.com/arca1000000
+    linkTitle: PATREON
+  - linkUrl: https://discordapp.com/invite/78Xjy74
+    linkTitle: DISCORD
+  - linkUrl: https://www.instagram.com/arca1000000
+    linkTitle: INSTAGRAM
+  - linkUrl: https://twitter.com/arca1000000
+    linkTitle: TWITTER
+  - linkUrl: http://facebook.com/arca1000000
+    linkTitle: FACEBOOK
