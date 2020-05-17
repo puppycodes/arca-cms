@@ -17,6 +17,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Credit", name: "credit", widget: "text" }
   - label: "Links"
     name: "links"
+    widget: "list"
     folder: "_posts/links"
     identifier_field: linkTitle
     filter: {field: "Link Title", name: "linkTitle", widget: "string"}
