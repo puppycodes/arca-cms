@@ -15,16 +15,17 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
       - { label: "Credit", name: "credit", widget: "text" }
-  - label: "Shows"
-    name: "shows"
-    folder: "_posts/shows"
-    identifier_field: show
-    filter: {field: "Show", name: "show", widget: "string"}
+  - label: "Links"
+    name: "links"
+    folder: "_posts/links"
+    identifier_field: links
+    filter: {field: "Title", name: "title", widget: "string"}
     sort: "date:asc"
     create: false
     slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
-      - { label: "Show", name: "show", widget: "text" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Url", name: "url", widget: "string" }
   - label: "Main Image"
     name: "mainImage"
     folder: "_posts/mainImage"
