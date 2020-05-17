@@ -18,16 +18,13 @@ collections: # A list of collections the CMS should be able to edit
   - label: "Links"
     name: "links"
     widget: "list"
+    summary: '{{fields.linkTitle}}'
     folder: "_posts/links"
-    identifier_field: linkTitle
-    filter: {field: "Link Title", name: "linkTitle", widget: "string"}
-    sort: "date:asc"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
       - label: Links List
         name: linksList
-        identifier_field: linkTitle
         widget: object
         allow_add: true
         fields:
