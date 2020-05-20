@@ -1,3 +1,3 @@
 ---
-mainImage: /img/uploads/nb_op_tall.jpg
+mainImage: /img/uploads/arca_kick-i_website_crop.jpg
 ---
