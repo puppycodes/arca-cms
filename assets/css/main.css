@@ -719,3 +719,7 @@ button:focus {
       text-align: center;
       padding: 20px;
 }
+
+.iti__arrow {
+  opacity: 0;
+}
