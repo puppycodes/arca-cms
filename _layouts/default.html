@@ -38,6 +38,8 @@
 
   <script type="text/javascript">
 
+  input = document.querySelector("#phone");
+
   window.intlTelInput(input, {
     // allowDropdown: false,
     // autoHideDialCode: false,
@@ -61,7 +63,6 @@
   separateDialCode: true
 });
 
-    input = document.querySelector("#phone");
     errorMsg = document.querySelector("#error-msg"),
     validMsg = document.querySelector("#valid-msg");
     submitButton = document.querySelector("#submit");
