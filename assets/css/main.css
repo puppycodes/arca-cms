@@ -4,9 +4,10 @@ html {
   line-height: 1.4;
   background-color: #fff;
   height: 100%;
-  background-position: center;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 
