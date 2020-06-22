@@ -3,9 +3,7 @@ html {
   font-size: 1em;
   line-height: 1.4;
   background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  height: 100%;
 }
 
 
@@ -722,4 +720,20 @@ button:focus {
 
 .iti__arrow {
   opacity: 0;
+  display: none;
+}
+
+.iti--separate-dial-code .iti__selected-dial-code {
+  top: 23px;
+  position: relative;
+  height: 50px;
+  width: 50px;
+  left: -8px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-left: 0 !important;
+}
+.iti__selected-flag {
+    height: 0 !important;
 }
