@@ -15,6 +15,15 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
       - { label: "Credit", name: "credit", widget: "text" }
+  - label: "Logo"
+    name: "logo"
+    folder: "_posts/logo"
+    identifier_field: logo
+    filter: { field: "Logo", name: "logo", widget: "image" }
+    create: false
+    slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
+    fields:
+      - { label: "Logo", name: "logo", widget: "image" }
   - label: "Main Image"
     name: "mainImage"
     folder: "_posts/mainImage"
