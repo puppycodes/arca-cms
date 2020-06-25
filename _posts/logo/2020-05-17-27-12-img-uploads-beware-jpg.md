@@ -1,3 +1,3 @@
 ---
-logo: assets/img/logo-cropped.svg
+logo: assets/img/rainbow.png
 ---

@@ -1,3 +1,3 @@
 ---
-mainImage: /img/uploads/arca_kick-i_website_comp.jpg
+mainImage: /img/uploads/flag-large.jpg
 ---
