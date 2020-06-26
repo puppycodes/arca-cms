@@ -1,29 +1,27 @@
 <!doctype html>
-<html style="background-image:url('{% include mainImage.html %}')">
+<html>
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     {% include head.html %}
   </head>
-  <body>
+  <body style="background-image:url('{% include mainImage.html %}')">
     {% include header.html %}
 
-
-
    <div class="logo">
-     <img src="{{ 'assets/img/logo-cropped.svg' | relative_url }}">
+     <img src="/assets/img/rainbow.png">
    </div>
 
   <div class="form-wrap">
     <div class="thanks-container">
-        <div class="thanks">
-      <div class="message">
-        <div><3<3<3<3<3</div>
-          <br>
-          ɐ
-        </div>
-    </div>
-    </div>
+    <div class="thanks">
+        <div class="message">
+          <div><3<3<3<3<3</div>
+            <br>
+            ɐ
+          </div>
+      </div>
+      </div>
          <form
            action="https://formkeep.com/f/e55339c33966"
            accept-charset="UTF-8"
@@ -39,42 +37,41 @@
            </div>
            <div class="consent">
              <div class="consent-text">
-               By submitting this form I authorize and expressly consent to receiving calls and/or SMS/text and voice messages delivered to my phone number from Arca
+               By submitting this form I authorize and expressly consent to receiving calls and/or SMS/text and voice messages delivered to my phone number
              </div>
            </div>
          </form>
   </div>
 
-  <script type="text/javascript">
-    var input = document.querySelector("#phone");
-    window.intlTelInput(input, {
-      // allowDropdown: false,
-      // autoHideDialCode: false,
-      // autoPlaceholder: "off",
-      // dropdownContainer: document.body,
-      // excludeCountries: ["us"],
-      formatOnDisplay: true,
-      // geoIpLookup: function(callback) {
-      //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-      //     var countryCode = (resp && resp.country) ? resp.country : "";
-      //     callback(countryCode);
-      //   });
-      // },
-      hiddenInput: "full_number",
-      initialCountry: "US",
-      // localizedCountries: { 'de': 'Deutschland' },
-      // nationalMode: false,
-      // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-      // placeholderNumberType: "MOBILE",
-      // preferredCountries: ['cn', 'jp'],
-    separateDialCode: true,
-    utilsScript: '{{ "/assets/js/utils.js" | relative_url }}',
-  });
 
-  console.log("test");
-  </script>
 
   <script type="text/javascript">
+
+  input = document.querySelector("#phone");
+
+  window.intlTelInput(input, {
+    // allowDropdown: false,
+    // autoHideDialCode: false,
+    // autoPlaceholder: "off",
+    // dropdownContainer: document.body,
+    // excludeCountries: ["us"],
+    formatOnDisplay: true,
+    // geoIpLookup: function(callback) {
+    //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+    //     var countryCode = (resp && resp.country) ? resp.country : "";
+    //     callback(countryCode);
+    //   });
+    // },
+    hiddenInput: "full_number",
+    initialCountry: "US",
+    // localizedCountries: { 'de': 'Deutschland' },
+    // nationalMode: false,
+    // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+    // placeholderNumberType: "MOBILE",
+    // preferredCountries: ['cn', 'jp'],
+  separateDialCode: true
+});
+
     errorMsg = document.querySelector("#error-msg"),
     validMsg = document.querySelector("#valid-msg");
     submitButton = document.querySelector("#submit");
@@ -92,6 +89,10 @@
     errorMsg.innerHTML = "";
     errorMsg.classList.add("hide");
     validMsg.classList.add("hide");
+  };
+
+  input.addEventListener('blur', function() {
+    reset();
     if (input.value.trim()) {
       if (iti.isValidNumber()) {
         validMsg.classList.remove("hide");
@@ -104,16 +105,15 @@
           submitButton.disabled = true;
       }
     };
-  };
-
-  input.addEventListener('blur', function() {
-    reset();
   });
 
   // on keyup / change flag: reset
   input.addEventListener('change', reset);
   input.addEventListener('keyup', reset);
+
   </script>
+
+
 
 
     {% include footer.html %}
