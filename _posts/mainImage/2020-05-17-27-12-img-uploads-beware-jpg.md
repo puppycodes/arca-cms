@@ -1,3 +1,3 @@
 ---
-mainImage: /img/uploads/qr-website.jpg
+mainImage: /img/uploads/combined-large.jpeg
 ---
