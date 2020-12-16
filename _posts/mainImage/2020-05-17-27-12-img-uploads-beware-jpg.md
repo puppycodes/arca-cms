@@ -1,3 +1,3 @@
 ---
-mainImage: /img/uploads/combined-large.jpeg
+mainImage: /img/uploads/flag-large.jpg
 ---
