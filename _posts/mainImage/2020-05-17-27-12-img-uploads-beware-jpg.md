@@ -1,3 +1,3 @@
 ---
-mainImage: /img/uploads/flag-large.jpg
+mainImage: /img/uploads/arca-by-bruno-staub-web.jpg
 ---
