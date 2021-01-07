@@ -29,11 +29,11 @@
            method="POST"
          >
            <div class="top">
-             <input id="phone" name="phone" type="tel">
+             <!-- <input id="phone" name="phone" type="tel">-->
              <span id="valid-msg" class="hide">✓ Valid</span>
              <span id="error-msg" class="hide"></span>
 
-              <button disabled id="submit" type="submit">submit</button>
+              <!-- <button disabled id="submit" type="submit">submit</button> -->
            </div>
            <div class="consent">
              <div class="consent-text">
@@ -43,78 +43,7 @@
          </form>
   </div>
 
-
-
-  <script type="text/javascript">
-
-  input = document.querySelector("#phone");
-
-  window.intlTelInput(input, {
-    // allowDropdown: false,
-    // autoHideDialCode: false,
-    // autoPlaceholder: "off",
-    // dropdownContainer: document.body,
-    // excludeCountries: ["us"],
-    formatOnDisplay: true,
-    // geoIpLookup: function(callback) {
-    //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-    //     var countryCode = (resp && resp.country) ? resp.country : "";
-    //     callback(countryCode);
-    //   });
-    // },
-    hiddenInput: "full_number",
-    initialCountry: "US",
-    // localizedCountries: { 'de': 'Deutschland' },
-    // nationalMode: false,
-    // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-    // placeholderNumberType: "MOBILE",
-    // preferredCountries: ['cn', 'jp'],
-  separateDialCode: true
-});
-
-    errorMsg = document.querySelector("#error-msg"),
-    validMsg = document.querySelector("#valid-msg");
-    submitButton = document.querySelector("#submit");
-
-  // here, the index maps to the error code returned from getValidationError - see readme
-  var errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
-
-  // initialise plugin
-  var iti = window.intlTelInput(input, {
-    utilsScript: '{{ "/assets/js/utils.js" | relative_url }}'
-  });
-
-  var reset = function() {
-    input.classList.remove("error");
-    errorMsg.innerHTML = "";
-    errorMsg.classList.add("hide");
-    validMsg.classList.add("hide");
-  };
-
-  input.addEventListener('blur', function() {
-    reset();
-    if (input.value.trim()) {
-      if (iti.isValidNumber()) {
-        validMsg.classList.remove("hide");
-          submitButton.disabled = false;
-      } else {
-        input.classList.add("error");
-        var errorCode = iti.getValidationError();
-        errorMsg.innerHTML = errorMap[errorCode];
-        errorMsg.classList.remove("hide");
-          submitButton.disabled = true;
-      }
-    };
-  });
-
-  // on keyup / change flag: reset
-  input.addEventListener('change', reset);
-  input.addEventListener('keyup', reset);
-
-  </script>
-
-
-
+  <script>window.scrollTo(0,document.body.scrollHeight);</script>
 
     {% include footer.html %}
 

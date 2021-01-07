@@ -414,6 +414,16 @@ a {
 }
 
 
+ input#phone {
+  overflow: visible;
+    background-color: #000000c7;
+    border: none;
+    height: 48px;
+    width: 100%;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
 /*
  * And let's fade it in from the left
@@ -720,19 +730,4 @@ button:focus {
       background-color: #000000c7;
       text-align: center;
       padding: 20px;
-}
-
-.iti--allow-dropdown .iti__flag-container, .iti--separate-dial-code .iti__flag-container {
-    right: auto;
-    text-indent: 10px;
-}
-
-.iti__flag-container {
-    padding: 0px !important;
-    left: -10px !important;
-}
-
-.iti__selected-flag {
-
-    padding: 0 !important;
 }
