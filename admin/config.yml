@@ -33,6 +33,15 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
     fields:
       - { label: "Main Image", name: "mainImage", widget: "image" }
+  - label: "Second Image"
+    name: "image2"
+    folder: "_posts/image2"
+    identifier_field: image2
+    filter: { field: "Second Image", name: "image2", widget: "image" }
+    create: false
+    slug: "{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}-{{slug}}"
+    fields:
+      - { label: "Second Image", name: "image2", widget: "image" }
   - label: "Menu Video"
     name: "menuVideo"
     folder: "_posts/menuVideo"

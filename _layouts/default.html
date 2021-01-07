@@ -5,8 +5,15 @@
     <title>{{ page.title }}</title>
     {% include head.html %}
   </head>
-  <body style="background-image:url('{% include mainImage.html %}')">
+  <body>
     {% include header.html %}
+
+    <div class="mainImage">
+      <img style="width:100%" src="{% include mainImage.html %}">
+    </div>
+    <div class="image2">
+      <img style="width:100%" src="{% include image2.html %}">
+    </div>
 
    <div class="logo">
      <img src="{% include logo.html %}">
