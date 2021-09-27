@@ -1,3 +1,3 @@
 ---
-mainImage: /img/uploads/twins-edit.jpg
+mainImage: /img/uploads/twins-edit-bar.jpg
 ---
