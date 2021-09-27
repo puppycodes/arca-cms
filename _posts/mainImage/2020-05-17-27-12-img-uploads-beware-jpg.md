@@ -1,3 +1,3 @@
 ---
-mainImage: /img/uploads/4kx4k_option02_a_presspic_x_unaxlafuente.png
+mainImage: /img/uploads/twins-30-06-2021.jpg
 ---
