@@ -1,3 +1,3 @@
 ---
-mainImage: /img/uploads/arca-twins-2.jpg
+mainImage: /img/uploads/arca-k2-web.jpg
 ---
